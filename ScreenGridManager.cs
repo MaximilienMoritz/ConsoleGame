@@ -14,7 +14,7 @@ public static class ScreenGridManager {
         string output = "";
         for (int i = 0; i < gridY; i++) {
             for (int j = 0; j < gridX; j++) {
-                if (i == x) {
+                if (j == x && i == y) {
                     output = "O";
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
