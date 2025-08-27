@@ -4,7 +4,7 @@ internal class Example {
     public static void Main() {
 
         int xCounter = 0;
-        int yCounter = ScreenGridManager.gridY;
+        int yCounter = ScreenGridManager.gridY-1;
         
         ConsoleKeyInfo cki = default;
         Console.TreatControlCAsInput = true;
@@ -13,8 +13,8 @@ internal class Example {
             cki = Console.ReadKey(true);
         
             if (cki.Key != ConsoleKey.None) {
-                //Console.WriteLine(cki.Key.ToString());
-
+                
+                // Movement key handling
                 switch (cki.Key) {
                     case ConsoleKey.A:
                         if (xCounter > 0 && xCounter <= ScreenGridManager.gridX) { 
@@ -23,7 +23,7 @@ internal class Example {
                         break;
                     
                     case ConsoleKey.D:
-                        if (xCounter >= 0 && xCounter < ScreenGridManager.gridX) { 
+                        if (xCounter >= 0 && xCounter < ScreenGridManager.gridX-1) { 
                             xCounter++;
                         }
                         break;
@@ -35,22 +35,41 @@ internal class Example {
                         break;
                     
                     case ConsoleKey.S:
-                        if (yCounter < ScreenGridManager.gridY && yCounter >= 0) { 
+                        if (yCounter < ScreenGridManager.gridY-1 && yCounter >= 0) { 
                             yCounter++;
                         }
                         break;
+                }
+
+                // Base for attacks
+                switch (cki.Key) {
+                    case ConsoleKey.I:
                         
+                        break;
+                    
+                    case ConsoleKey.K:
+                        
+                        break;
+                    
+                    case ConsoleKey.J:
+                        
+                        break;
+                    
+                    case ConsoleKey.L:
+                        
+                        break;
                 }
                 
+                // Render the screen
                 ScreenGridManager.drawGrid(xCounter, yCounter);
+                
+                // Writes the Character's world position
                 Console.WriteLine(xCounter.ToString() + "  " + yCounter.ToString());
                 
             }
             
             
         }
-        
-        //ScreenGridManager.drawGrid();
 
     }
 
