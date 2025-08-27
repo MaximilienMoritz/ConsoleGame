@@ -4,7 +4,7 @@ internal class Example {
     public static void Main() {
 
         int xCounter = 0;
-        int yCounter = ScreenGridManager.gridY;
+        int yCounter = ScreenGridManager.gridY-1;
         
         ConsoleKeyInfo cki = default;
         Console.TreatControlCAsInput = true;
@@ -23,7 +23,7 @@ internal class Example {
                         break;
                     
                     case ConsoleKey.D:
-                        if (xCounter >= 0 && xCounter < ScreenGridManager.gridX) { 
+                        if (xCounter >= 0 && xCounter < ScreenGridManager.gridX-1) { 
                             xCounter++;
                         }
                         break;
@@ -35,7 +35,7 @@ internal class Example {
                         break;
                     
                     case ConsoleKey.S:
-                        if (yCounter < ScreenGridManager.gridY && yCounter >= 0) { 
+                        if (yCounter < ScreenGridManager.gridY-1 && yCounter >= 0) { 
                             yCounter++;
                         }
                         break;
