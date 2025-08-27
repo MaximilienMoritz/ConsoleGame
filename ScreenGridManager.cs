@@ -15,11 +15,11 @@ public static class ScreenGridManager {
         for (int i = 0; i < gridY; i++) {
             for (int j = 0; j < gridX; j++) {
                 if (i == x) {
-                    output += 'O';
+                    output = "O";
                     Console.BackgroundColor = ConsoleColor.Red;
                     Console.ForegroundColor = ConsoleColor.Black;
                 } else {
-                    output += 'U';
+                    output = "U";
                     Console.BackgroundColor = ConsoleColor.Green;
                     Console.ForegroundColor = ConsoleColor.Black;
                 }
@@ -33,7 +33,7 @@ public static class ScreenGridManager {
             //Console.Write(output);
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("\n");
+            Console.WriteLine();
             
             output = "";
         }
