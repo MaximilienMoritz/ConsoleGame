@@ -13,8 +13,8 @@ internal class Example {
             cki = Console.ReadKey(true);
         
             if (cki.Key != ConsoleKey.None) {
-                //Console.WriteLine(cki.Key.ToString());
-
+                
+                // Movement key handling
                 switch (cki.Key) {
                     case ConsoleKey.A:
                         if (xCounter > 0 && xCounter <= ScreenGridManager.gridX) { 
@@ -39,18 +39,37 @@ internal class Example {
                             yCounter++;
                         }
                         break;
+                }
+
+                // Base for attacks
+                switch (cki.Key) {
+                    case ConsoleKey.I:
                         
+                        break;
+                    
+                    case ConsoleKey.K:
+                        
+                        break;
+                    
+                    case ConsoleKey.J:
+                        
+                        break;
+                    
+                    case ConsoleKey.L:
+                        
+                        break;
                 }
                 
+                // Render the screen
                 ScreenGridManager.drawGrid(xCounter, yCounter);
+                
+                // Writes the Character's world position
                 Console.WriteLine(xCounter.ToString() + "  " + yCounter.ToString());
                 
             }
             
             
         }
-        
-        //ScreenGridManager.drawGrid();
 
     }
 
