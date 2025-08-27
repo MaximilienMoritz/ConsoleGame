@@ -12,3 +12,4 @@ C:\Users\void\RiderProjects\ConsoleGame\obj\Debug\net9.0\refint\ConsoleGame.dll
 C:\Users\void\RiderProjects\ConsoleGame\obj\Debug\net9.0\ConsoleGame.pdb
 C:\Users\void\RiderProjects\ConsoleGame\obj\Debug\net9.0\ConsoleGame.genruntimeconfig.cache
 C:\Users\void\RiderProjects\ConsoleGame\obj\Debug\net9.0\ref\ConsoleGame.dll
+C:\Users\void\RiderProjects\ConsoleGame\obj\Debug\net9.0\ConsoleGame.sourcelink.json
